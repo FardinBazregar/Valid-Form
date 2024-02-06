@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="name">Name :</label>
+      <input type="text" id="name" name="name" oninput="validateName()" />
+      <div class="error-text" id="nameError">
+        نام باید حاوی حداکثر 15 حرف انگلیسی باشد.
+      </div>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" oninput="validateEmail()" />
+      <div class="error-text" id="emailError">
+        فرمت ایمیل وارد شده صحیح نیست.
+      </div>
+
+      <label for="password">Password :</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        oninput="validatePassword()"
+      />
+      <div class="error-text" id="passwordError">
+        پسورد باید حداقل 8 کاراکتر باشد و شامل حروف کوچک، بزرگ و اعداد باشد.
+      </div>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
